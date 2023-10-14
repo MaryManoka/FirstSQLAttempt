@@ -8,7 +8,17 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" Margin="0 0 5 0">
+                    <TextBlock x:Name="lb_login" Text="Логин"/>
+                    <TextBlock x:Name="lb_password"  Text="Пароль"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="250">
+                    <TextBox x:Name="tb_login" Height="{Binding ElementName=log,Path=Text, Mode=TwoWay}"/>
+                    <TextBox x:Name="tb_password" Height="{Binding ElementName=log,Path=Text, Mode=TwoWay}"/>
+                </StackPanel>
+            </StackPanel>
+            <Button Content="OK" x:Name="bt_OK" Click="bt_OK_Click"/>
         </StackPanel>
 
     </Grid>

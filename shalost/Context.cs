@@ -11,7 +11,9 @@ namespace Progect1.shalost
     {
         public Context() 
         {
+            //Database.EnsureDeleted();
             Database.EnsureCreated(); //метод, который создает БД        
+
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
